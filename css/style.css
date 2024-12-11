@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+  }
+  
+  .music-player {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 300px;
+  }
+  
+  .music-player img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  button {
+    background: #ff4b5c;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background: #e53e4c;
+  }
+  
+  .progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+  }
+  
