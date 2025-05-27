@@ -1,24 +1,10 @@
-const songs = [
-  {
-    title: "Song One",
-    artist: "Artist One",
-    src: "assets/song1.mp3",
-    cover: "assets/cover1.jpg"
-  },
-  {
-    title: "Song Two",
-    artist: "Artist Two",
-    src: "assets/song2.mp3",
-    cover: "assets/cover2.jpg"
-  },
-  {
-    title: "Song Three",
-    artist: "Artist Three",
-    src: "assets/song3.mp3",
-    cover: "assets/cover3.jpg"
-  }
-  // Add more songs here for unlimited music
-];
+// Generate songs dynamically
+const songs = Array.from({ length: 500 }, (_, i) => ({
+  title: `Song ${i + 1}`,
+  artist: `Artist ${i + 1}`,
+  src: `assets/song${i + 1}.mp3`,
+  cover: `assets/cover${i + 1}.jpg`
+}));
 
 let currentIndex = 0;
 
@@ -52,11 +38,7 @@ function pauseSong() {
 }
 
 function togglePlay() {
-  if (audio.paused) {
-    playSong();
-  } else {
-    pauseSong();
-  }
+  audio.paused ? playSong() : pauseSong();
 }
 
 function nextSong() {
